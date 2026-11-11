@@ -196,6 +196,17 @@ defaults:
       path: _drafts
     values:
       comments: false
+  # 언어별 폴더: 주소를 /ko/posts/..., /en/posts/... 로 나눔
+  - scope:
+      path: _posts/ko
+      type: posts
+    values:
+      permalink: /ko/posts/:title/
+  - scope:
+      path: _posts/en
+      type: posts
+    values:
+      permalink: /en/posts/:title/
   - scope:
       path: ""
       type: tabs # see `site.collections`
